@@ -38,7 +38,7 @@ function registerStories(req, fileName, sbInstance, plugins, extensions) {
         data() {
           return data;
         },
-        template: story.template.replace('@component', componentName.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()),
+        template: story.template.replace('current-component', componentName.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()),
         methods: eval(`(${story.methods})`)
       };
     };
